@@ -1,0 +1,14 @@
+Check: {
+    level: Error, 
+    description: 'Cheking Metrics of High severity'
+}
+
+Constraints: [
+    addConstraint: 'isComplete("dat_ref_carga")',
+    addConstraint: 'isComplete("i1c_cli_possui_conta")',
+    addConstraint: 'isComplete("i1c_lim_pre_ap_preventivo")',
+    addConstraint: 'isComplete("i1c_rating_riscos")',
+    addConstraint: 'isComplete("i1c_renda_final")',
+    addConstraint: 'isComplete("i1d_idade")',
+    addConstraint: 'isComplete("i1d_sexo")'
+]

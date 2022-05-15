@@ -1,0 +1,11 @@
+-r requirements.txt
+
+-e .
+
+pytest
+pytest-cov==2.7.1
+coverage==4.5.4
+pytest-sugar
+pytest-mock
+
+pre-commit

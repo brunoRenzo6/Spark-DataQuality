@@ -1,0 +1,11 @@
+Check: {
+    level: Warning, 
+    description: 'Follow Table Size Changes'
+}
+
+AnomalyDetection: [
+    addAnomalyCheck: {
+        strategy: "AbsoluteChangeStrategy(maxRateIncrease=500.0, maxRateDecrease= 20.0)",
+        analyzer: Size()
+    }
+]

@@ -1,0 +1,1 @@
+- sql_query: "select nr_cpf, dt_inic_camp, vl_limi_aprv_cheq from th.thdt036 limit 5"

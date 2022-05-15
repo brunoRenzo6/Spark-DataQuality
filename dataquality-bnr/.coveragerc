@@ -1,0 +1,24 @@
+[run]
+branch = True
+source = dataquality_bnr
+omit =
+    *test_*
+    tests/**
+    *__init__
+    *setup.py
+
+[report]
+ignore_errors = False
+show_missing = True
+omit =
+    *test_*
+    tests/**
+    *__init__
+    *setup.py
+
+[html]
+directory = coverage-reports
+
+[xml]
+# default directory by sonarqube documentation
+output = coverage-reports/coverage.xml

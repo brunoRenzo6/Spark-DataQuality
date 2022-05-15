@@ -1,0 +1,24 @@
+- (Done) Tornar o varificationSuite.yaml.ResultKey um parametro opcional 
+    - Checar impacto disso em AnomalyDetectoin também
+    
+- Implementar limite fisico na estrutura do persistentRepository, de acordo com o parametro em 
+infrastructure.yaml
+    - Já existe um limite "lógico" devido os filtros que ocorrem durante o processo. Contudo, deveria existir um limite físico de regitros possiveis de serem armazenados no persistentRepository.
+    
+- __Compliance AnomalyDetection__ is not working properly
+
+-AnomalyDetection
+    - AbsoluteChangeStrategy(maxRateIncrease=0.2, maxRateDecrease=0.2)
+        - AnomalyDetection is taking only one strategy (SOLVED)
+
+- Remover do constraintSuggestion os checks que nao sao validos no pyDeequ.
+    - Na versao atual estamos desconsiderando esses checks quando em execusao, mas eles nao deve nem mesmo ser sugeridos.
+    
+- Improve .yaml quotes inside quotes handling.
+    - Alguns dos paramentros do arquivo verificationSuite.yaml necessitam de parametros que contem single quotes. O problema 
+é que como a própria constraint está em single quotes, quando adicionamos esses parametros acabamos tendo single quotes dentro de single quotes.
+Como por exemplo, __addConstraint: 'satisfies("Nome IS NULL or TRIM(Nome) == ''''", "null/empty/whitespace", lambda x: x <=0.2)'__.
+No momento podemos resolver o problema simplistemente dobrando as single quotes, mas essa solucao, por exemplo, dificulta o compreendimento
+do código SQL original.
+    
+- (Warning) Tomas cuidado com requirements.txt, talvez alguns dos requisitos entre em conflito com o servidor, por conta de versionamento

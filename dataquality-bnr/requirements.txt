@@ -1,0 +1,4 @@
+pydeequ==1.0.1
+pandas
+importlib-resources
+PyYAML

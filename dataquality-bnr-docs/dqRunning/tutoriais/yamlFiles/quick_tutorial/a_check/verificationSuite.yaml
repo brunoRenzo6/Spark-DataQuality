@@ -1,0 +1,15 @@
+Check: {
+    level: Warning, 
+    description: 'Cheking Metrics of Moderate severity'
+}
+
+Constraints: [
+    addConstraint: 'isContainedIn("dat_ref_carga", ["2022-01-03"])',
+    addConstraint: 'isContainedIn("i1c_cli_possui_conta", ["1", "0"])',
+    addConstraint: 'hasDataType("i1c_cli_possui_conta", ConstrainableDataTypes.Integral)',
+    addConstraint: 'isContainedIn("i1c_lim_pre_ap_preventivo", ["0", "2", "3"])',
+    addConstraint: 'isNonNegative("i1c_lim_pre_ap_preventivo")',
+    addConstraint: 'isNonNegative("i1c_renda_final")',
+    addConstraint: 'isContainedIn("i1d_sexo", ["M", "F", " "])',
+    addConstraint: 'isComplete("i1c_cli_possui_conta")',
+]

@@ -1,0 +1,8 @@
+- Size()
+- Maximum('i1c_renda_final')
+- Minimum('i1c_renda_final')
+- Mean('i1c_renda_final')
+- Mean('i1c_lim_pre_ap_preventivo')
+- Maximum('i1d_idade')
+- StandardDeviation('i1d_idade')
+- Histogram('i1c_rating_riscos')

@@ -1,0 +1,19 @@
+Check: {
+    level: Error, 
+    description: 'Anomaly detecion on Histograms'
+}
+
+AnomalyDetection: [
+    addAnomalyCheck: {
+        analyzer: Size(),
+        strategy: "RelativeRateOfChangeStrategy(maxRateIncrease=1.05)",
+    },
+    addAnomalyCheck: {
+        analyzer: custom_Histogram("i1c_rating_riscos"),
+        strategy: "RelativeRateOfChangeStrategy(maxRateIncrease=1.2)",
+    },
+    addAnomalyCheck: {
+        analyzer: custom_Histogram("i1d_sexo"),
+        strategy: "RelativeRateOfChangeStrategy(maxRateIncrease=1.2)",
+    }
+]

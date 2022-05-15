@@ -1,0 +1,10 @@
+persistentRepository: {
+    maxSize: 30
+}
+temporaryRepository: {
+    maxSize: 10, 
+    filters: {
+        lastNDays: 15, 
+        onlySucceed: True, 
+    }
+}

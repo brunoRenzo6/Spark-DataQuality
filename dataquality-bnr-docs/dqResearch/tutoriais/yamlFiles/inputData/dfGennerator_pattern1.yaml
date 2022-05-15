@@ -1,0 +1,7 @@
+- hdfs_path: "hdfs://nameservice1/sistemas/bdi/TH/THDT036/daily/2021/01/28"
+  table_name: my_thdt036
+  sql_query: |
+    select nr_cpf,
+           dt_inic_camp,
+           CAST(vl_limi_aprv_cheq as FLOAT)
+    from my_thdt036  where vl_limi_aprv_cheq < 5100.00 limit 10

@@ -1,0 +1,3 @@
+persistentRepository: {
+    maxSize: 30
+}

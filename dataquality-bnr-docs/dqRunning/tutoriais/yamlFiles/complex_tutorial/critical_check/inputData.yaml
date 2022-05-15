@@ -1,0 +1,12 @@
+- sql_query: |
+    select
+        i1c_renda_final,
+        i1c_lim_pre_ap_preventivo,
+        i1c_rating_riscos,
+        i1d_idade,
+        i1d_sexo,
+        i1c_cli_possui_conta,
+        i1c_soc_cd_segm_empr1,
+        i1c_soc_cd_ramo_atvd1,
+        dat_ref_carga
+    from th.thbpd381 where dat_ref_carga='2022-01-03'

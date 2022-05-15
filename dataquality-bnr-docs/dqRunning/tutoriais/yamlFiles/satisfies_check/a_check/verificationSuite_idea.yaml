@@ -1,0 +1,25 @@
+Check: {
+    level: Error, 
+    description: 'CheckObject by yaml File'
+}
+
+Constraints: [
+    addConstraint: {
+        check_method: hasApproxCountDistinct(),
+        column: "i1d_sexo",
+        assertion: "lambda x: x>=2"
+    },
+    addConstraint: {
+        check_method: hasSize(),
+        assertion: "lambda x: x<500300"
+    },
+    addConstraint: {
+        check_method: satisfies(),
+        columnCondition: "i1c_rating_riscos = 9",
+        constraintName: "isRating9",
+        assertion: "lambda x: x>0.2"
+    }
+    
+]
+
+
