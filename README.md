@@ -1,6 +1,6 @@
 # DataQuality
 
-
+dataquality-bnr its a library built upon AWS PyDeequ. The goal was to develop a solution who enables deep data quality measurement from simple .yaml file constraint specifications.
 
 
 
